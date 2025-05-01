@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer-box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+        
+            position: relative;
+        }
+
+        .inner-box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+
+            position: absolute;     /* top, left, bottom, right */
+            top: 50%;
+            left: 50%;
+            /* 요소를 가운데에 배치하는 게 아니라 거기다 
+            점을 딱 찍고 거기서부터 그림 그리는거라 가운데 아님 */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="outer-box">
+        <div class="inner-box">
+        </div>
+    </div>
+
+</body>
+</html>

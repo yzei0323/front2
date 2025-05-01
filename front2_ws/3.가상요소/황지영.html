@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 300px;
+            background-color: cadetblue;
+
+            position: relative;
+        }
+        /* 요소 뒤쪽에 가상으로 넣겠다*/
+        .item::after{
+            content: "┬┴┬┴┤┬┴┬┴┬┴┬┴┤┬┴┬┴┬┴┬┴┤┬┴┬┴┬┴┬┴┤┬┴┬┴┬┴┬┴┤┬┴┬┴";   
+            /*content 이 내용요소 가 반드시 있어야한다. 내용이 없는경우엔 "" 로 라도 입력해야함*/
+            width: 0px;
+            height: 1px;
+            background-color: red;
+
+            /*부모를 기준으로 왼쪽에서 0 바닥에서0 의 위치에 배치하겠다*/
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            transition: 0.5;
+        }
+        .item:hover:after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>가상요소 사용하기</h2>
+    <h3>가상요소를 사용하여 밑줄 나오게하기</h3>
+
+    <div class="item">메뉴 </div>
+
+
+</body>
+</html>

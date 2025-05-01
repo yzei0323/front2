@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 400px;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+
+        .wrap > div{
+            border: 1px solid black;
+        }
+
+        .field{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .field label{
+            flex: 1;
+        }
+
+        .field input{
+            flex: 4;
+        }
+
+        /* 모바일 구간 */
+
+        /*
+            1) 로그인 : 400px => width: 100% 
+                    (부모의 크기 100% 의미함, body는 기준이 뷰포트vh(장치)의 너비)
+            2) field 영역의 가로배치 -> 세로로 하기
+            3) 버튼크기 주기(100%);
+        */
+
+
+        @media(max-width:768px){
+            .wrap{
+                width: 100%; 
+            }
+            .field{
+                flex-direction: column;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+    
+    <div class="wrap">
+        <h2>에이콘 로그인</h2>
+        <!-- 필드영역 -->
+        <div class="field">
+            <label>이름</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label>아이디</label>
+            <input type="password">
+        </div>
+
+        <div><button>로그인</button></div>
+    </div>
+
+</body>
+</html>

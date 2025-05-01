@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .item{
+            width: 100px;
+             background-color: antiquewhite; 
+
+           position: relative;
+        }
+
+        .underline{            
+             height: 1px;
+             background-color: red;
+             width: 0px;
+             transition: .5s;
+
+             position: relative;
+             bottom: 0px;
+             left: 0px;
+
+        }
+
+        .item:hover   .underline{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h2>밑줄나오기</h2>
+
+      <div  class="item"> 메뉴
+        <div class="underline"></div>
+      </div>
+
+</body>
+</html>

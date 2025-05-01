@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 80px;
+            background-color: antiquewhite;
+
+            /* 자식요소를 정중앙에 배치 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner{
+            width: 1280px;
+            border: 1px solid black;
+
+            display: flex;  /* 자식들을 가로로 배치 */
+            flex-direction: row; /**/
+
+            justify-content: space-between;
+        }
+
+        .inner > div {
+            border: 1px solid black;
+        }
+
+        .trigger{
+            display: none;
+        }
+
+
+        /* 모바일 구간, 768까지 */
+        
+        /*
+            1. header 80px -> 높이(height) : auto
+            2. inner 크기(1280px) -> 100% 변경
+            3. inner 안의 내용 가로 -> 세로로
+            4. 햄버거 영역 보이기 ( => 위치 설정(부모를 기준으로 오른쪽 맨위에 붙이기) )
+        */
+        
+        @media (max-width: 768px){
+            header{
+                height: auto;
+            }
+            .inner{
+                width: 100%;   
+                flex-direction: column;
+                position: relative;
+
+                text-align: center;
+            }
+
+            .trigger{
+                display: block;
+            
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+
+            .gnb, .sns{
+                display: none;
+            }
+
+            .gnb.on, .sns.on{
+                display: block;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <!-- inner 영역 -->
+        <div class="inner">
+            <div class="logo">로고</div>
+            <div class="gnb">메뉴</div>
+            <div class="sns">sns</div>
+            <div class="trigger">햄</div>
+        </div>
+    </header>
+
+    <script>
+        let triggerE = document.querySelector(".trigger");
+        let gnb = document.querySelector(".gnb");
+        let sns = document.querySelector(".sns");
+
+        triggerE.addEventListener("click", function(){
+        //    alert("아무거나")
+            gnb.classList.toggle("on");
+            sns.classList.toggle("on");
+        
+        });
+    
+    </script>
+</body>
+</html>

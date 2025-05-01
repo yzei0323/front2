@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        .item{
+            width: 100px;
+            background-color: antiquewhite;
+
+            position: relative;
+        }
+
+        /* 가상요소 */
+        .item::after{
+
+          content:"";    /*  반드시 있어야 함  , 내용이없는 경우  빈문자열  ""  사용 */
+          width: 0px;
+          height: 1px;
+          background-color: red;
+
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          transition: 0.5s;
+
+        }
+
+
+        .item:hover:after{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <h2> 가상요소 사용하기(밑줄)</h2>
+
+    <div class="item"> 메뉴  </div>
+
+
+</body>
+</html>

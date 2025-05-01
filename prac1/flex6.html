@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .wrap{
+            display: flex;
+            /* flex-direction: row; /* 기본값 */
+            flex-direction: column;
+            height: 500px;
+            border: 1px solid black ;
+            justify-content: space-around; /*이거만바꿈*/
+            align-items: center;
+
+            width: 300px;
+            height: 500px;
+        }
+        
+        .item{
+            border: 1px solid black;
+            /* flex: 1;  /* 1:1:1로 됨 */
+            height: 30px;
+            width: 100px;
+            text-align: center;
+        }
+
+</style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+
+</body>
+</html>

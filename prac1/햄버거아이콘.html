@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height:80px;
+            background-color: rgb(255, 245, 152);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner{
+            width: 1280px;
+            height: 50px;
+            padding: 10px;
+            background-color: rgb(211, 211, 248);
+
+            position: relative;
+        }
+
+        .trigger{
+            position:absolute; /*부모에 -> relative로 하려고 하는데 이미 absolute이면 그대로 사용하면 됨*/
+            right: 0px;
+            top: 0px;
+
+            width:25px;
+            height: 15px;
+            border: 1px solid black;
+        }
+
+        .trigger > div{
+            height: 1px;     
+            background-color: white;
+            width: 100%;
+            
+            position: absolute;
+        }
+
+        .trigger > div:nth-child(1){
+            top: 0px;
+        }
+        .trigger > div:nth-child(2){
+            top: 50%;
+        }   
+        .trigger > div:nth-child(3){
+            top: 100%;
+        }
+
+
+        /* 햄버거 아이콘 클릭시 */
+        .trigger.active > div:nth-child(1){
+            top: 50%;
+            transform: rotate(45deg);
+        }
+        .trigger.active > div:nth-child(2){
+            top: 0;
+        }   
+        .trigger.active > div:nth-child(3){
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="trigger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let trigger = document.querySelector(".trigger");
+        trigger.addEventListener("click", function(){
+            //alert("아무거나")
+
+            trigger.classList.toggle("active");
+            
+        });
+
+    </script>
+</body>
+</html>

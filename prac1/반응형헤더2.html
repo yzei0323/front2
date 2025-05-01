@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    
+        *{
+            padding: 0; 
+            margin: 0;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        header{
+            height: 80px;
+            background-color: rgb(224, 255, 206);
+
+            /* 자식(inner박스) 정가운데 배치 */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .inner{
+            width: 1280px;
+            border: 1px solid black;
+
+            /* 자식요소 가로로 배치 후 정렬 */
+            display: flex;
+            flex-direction: row; /*기본값*/
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .inner > div{
+           /* border: 1px solid black;*/
+           height: 25px;
+        }
+
+        .gnb{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .gnb li{
+            padding-right: 5px;
+        }
+
+        /**/
+       .trigger{
+            display: none;
+        }
+
+
+        /*
+            1. header 높이 auto 변경하기
+            2. inner 너비 100%로 변경하기
+            3. inner flex-direction: 세로로 변경하기
+            4. gnb(메뉴) : flex-direction: 세로로 변경하기 
+            5. 햄보이기
+            6. inner 영역 기준으로 오른쪽 끝에 배치하기(부모-relative, 자식-absolute)
+        */
+
+        /* 모바일 구간, 768까지 */
+        @media(max-width: 768px){
+            header{
+                height: auto;  /* 80-> auto */
+            }
+
+            .inner{
+                width: 100%;
+                flex-direction: column;
+                padding: 10px;
+                position: relative;
+                
+                background-color: rgb(216, 218, 255);
+            }
+
+            .gnb{
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                border-bottom: 0.5px solid whitesmoke;
+                padding: 10px;
+            }
+
+            .trigger {
+                display: block;
+                padding: 10px;
+
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+
+            .gnb, .sns{
+                display: none;
+            }
+
+            .gnb.on, .sns.on{
+                display: block;
+            }
+
+            
+        }
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <!-- 로고영역 -->
+            <div class="logo">로고</div>
+
+            <!-- 메뉴영역 -->
+            <ul class="gnb">
+                <li><a href="#none">Home</a></li>
+                <li><a href="#none">About</a></li>
+                <li><a href="#none">Location</a></li>
+                <li><a href="#none">Contact</a></li>
+            </ul>
+
+            <!-- sns영역 -->
+            <div class="sns">
+                <a href="#none"><i class="fa fa-facebook"></i></a>
+                <a href="#none"><i class="fa fa-twitter"></i></a>
+                <a href="#none"><i class="fa fa-youtube-play"></i></a>
+            </div>
+
+            <!-- 햄버거아이콘 영역 -->
+            <div class="trigger"> X </div>
+
+        </div>
+
+        <script>
+            let triggerE = document.querySelector(".trigger");
+            let gnb = document.querySelector(".gnb");
+            let sns = document.querySelector(".sns");
+    
+            triggerE.addEventListener("click", function(){
+            //    alert("아무거나")
+                gnb.classList.toggle("on");
+                sns.classList.toggle("on");
+            
+            });
+        
+        </script>
+    </header>
+</body>
+</html>
