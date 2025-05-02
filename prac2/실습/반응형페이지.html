@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 18px;
+        }
+        .webtoon{
+            font-size: 25px;
+            color: black ;
+            font-weight: bold;
+        }
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+            /*border: 1px solid black;*/
+        }
+
+        .header{
+            /*border: 1px solid black; */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .gnb{
+            /*border: 1px solid black;*/
+            align-items: center;
+            flex: 4;
+            display: flex;
+        }
+        .gnb a {
+            padding-right: 10px; 
+        }
+        .gnb img{
+            width: 70px;
+        }
+        .search{
+            border: 0.5px solid #ccc;
+            flex: 1.2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search input{
+            padding: 10px;
+            width: 100%;
+            font-size: 14px;
+        
+            outline: none;
+            border: none;
+        }
+
+        .search img{
+            display: block;
+            width: 20px;
+            height: 20px;
+            align-items: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* item css */
+        h4, h5{
+            padding-top: 5px;
+            padding-left: 5px;
+            margin: 0;
+        }
+        .item-wrap{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .item{
+            width: 230px;
+            margin-top: 50px;
+            box-sizing: border-box;
+        }
+
+        .item img{
+            width: 100%;
+            border: 0.5px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .item img:hover {
+            transform: scale(1.03); 
+            transition: transform 0.3s;
+        }
+    
+         /* 모바일 구간 */
+         @media(max-width: 768px){
+            .wrap{
+                width:100%;
+            }
+            .gnb{
+                flex: 1.5;
+            }
+            .search{
+                flex: 1;
+            }
+            .item-wrap{
+                flex-direction: column;
+                align-items: center;
+            }
+         }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        
+        <!-- header -->
+        <div class="header">
+            <div class="gnb">
+                <a href="#none"><img src="/prac2/img/logo.png"></a>
+                <a class="webtoon" href="#none">웹툰 </a>
+                <a href="#none">| 웹소설  
+                </a>
+                <a href="#none">|  시리즈</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="제목/작가로 검색할 수 있습니다.">
+                <img src="/prac2/img/search.png">
+            </div>
+        </div> 
+
+        <div class="item-wrap">
+            <!-- item -->
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/822239/thumbnail/thumbnail_IMAG21_5a915557-91af-430f-92e1-5c863a6944db.jpg">
+                <h4>그렇게 물거품이 되어도</h4>
+                <h5>다홍</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/777767/thumbnail/thumbnail_IMAG21_cc85f891-272b-450a-b642-cffe1568ab71.jpg">
+                <h4>역대급 영지 설계사</h4>
+                <h5>이현민 / 김현수 / 문백경</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/725586/thumbnail/thumbnail_IMAG21_aac005dc-11a7-41b6-a127-4ffa5b480698.jpg">
+                <h4>1초</h4>
+                <h5>시니 / 광운</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/765804/thumbnail/thumbnail_IMAG21_011afdde-cc86-418b-94ed-7baa9e11f094.jpg">
+                <h4>A.I. 닥터</h4>
+                <h5>ZAINO / 쿠큐 / 한산이가</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/761496/thumbnail/thumbnail_IMAG21_7306581563690476642.jpg">
+                <h4>도무지 그애는</h4>
+                <h5>게코</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/761496/thumbnail/thumbnail_IMAG21_7306581563690476642.jpg">
+                <h4>도무지 그애는</h4>
+                <h5>게코</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/761496/thumbnail/thumbnail_IMAG21_7306581563690476642.jpg">
+                <h4>도무지 그애는</h4>
+                <h5>게코</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/761496/thumbnail/thumbnail_IMAG21_7306581563690476642.jpg">
+                <h4>도무지 그애는</h4>
+                <h5>게코</h5>
+            </div>
+
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/761496/thumbnail/thumbnail_IMAG21_7306581563690476642.jpg">
+                <h4>도무지 그애는</h4>
+                <h5>게코</h5>
+            </div>
+            
+            <div class="item">
+                <img src="https://image-comic.pstatic.net/webtoon/761496/thumbnail/thumbnail_IMAG21_7306581563690476642.jpg">
+                <h4>도무지 그애는</h4>
+                <h5>게코</h5>
+            </div>
+
+        </div>
+    
+    </div>
+    </body>
+</html>
