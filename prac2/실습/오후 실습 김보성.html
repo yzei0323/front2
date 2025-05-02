@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .base{
+            display: flex;
+        }
+        .right{
+            width: 50%;
+            height: 700px;
+            border: 1px solid black;
+            position: relative;
+            background-image: url('https://on.com2us.com/wp-content/uploads/2023/01/shutterstock_1938676873-scaled.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(1);
+        }
+        .left{
+            width: 50%;
+            height: 700px;
+            border: 1px solid blue;
+            position: relative;
+            background-image: url('https://media.istockphoto.com/id/1451387012/ko/%EB%B2%A1%ED%84%B0/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC-%ED%8F%AC%EC%8A%A4%ED%84%B0-%EC%95%A1%EC%B2%B4-%EC%9E%BC%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%A7%9B%EC%9E%88%EB%8A%94-%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EC%9D%B4-%EC%9E%88%EB%8A%94-%EA%B4%91%EA%B3%A0-%ED%94%8C%EB%9E%98%EC%B9%B4%EB%93%9C-%EA%B7%B8%EB%A6%BC-%EB%83%89%EB%8F%99-%EC%A0%9C%ED%92%88%EC%9D%98-%EA%B4%9C%EC%B0%AE%EC%9D%80-%EB%B2%A1%ED%84%B0-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%A9%94%EB%89%B4.jpg?s=1024x1024&w=is&k=20&c=WgKKHADwWl6dLx2nxJs5U2YMeyhJ7YT6AZ7EJWV_cDI=');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(1);
+            transition: filter 0.3 ease; 
+        }
+
+        .right:hover{
+                filter: brightness(1);
+        }
+        .left:hover{
+                filter: brightness(1);
+        }
+
+        .button{
+            /* border: 1px solid black; */
+            padding: 10px;
+            background-image: url('https://icons.veryicon.com/png/o/miscellaneous/general-icon-collection-face-right-angle/choice-17.png');
+            background-size: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+
+        .t1, .t2{
+            font-size: 30px;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            color: white;
+            
+        }
+
+        /* .right .button{
+            background-color: brown;
+        }
+        .left .button{
+            background-color: aqua;
+        } */
+
+        @media (max-width: 768px){
+
+            .base{
+                flex-direction: column;
+            }
+            
+
+            .left, .right{
+                width: 100%;
+            }
+            .t1, .t2{
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: all 0.3s ease;
+            }
+
+            .right,
+            .left{
+                filter: brightness(0.5);
+            }
+
+            .right:hover .t1{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .left:hover .t2{
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .button{
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="base">
+        <div class="right">
+            <a href="https://cafe.daum.net/jhlittleprince?gad_source=1&gbraid=0AAAAA_Y9EXIZBTArf5ZBEumb0SMvGhWM5&gclid=Cj0KCQjw2tHABhCiARIsANZzDWo-HwiOTsNGVZqpbrHxNbdi22cRYJOJSqcHFeuTVY6qaVLu1V7RpXUaAjE5EALw_wcB" class="t1" >햄부기</a>
+            <a href="#none" class="button"></a>
+        </div>
+
+        <div class="left">
+            <a href="https://www.i-scream.co.kr/user/main/MainPage.do" class="t2">아이스크림</a>
+            <a href="#none" class="button"></a>
+        </div>
+    </div>
+</body>
+</html>
