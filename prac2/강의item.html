@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 290px;
+            border: 0.5px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .item img{
+            width: 100%;
+        }
+
+        .title{     /* span, a -> 인라인태그(크기를 가질 수 없다), 
+                        input, img, button 인라인블럭 */
+            color: royalblue;
+            /*background-color: whitesmoke; block으로 바뀐거 확인용 */
+
+            display: block;  
+            margin-top: 30px;
+        }
+
+        .price{
+            color: blue;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .best{
+            padding: 5px 10px;
+            background-color: pink;
+            border-radius: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="item">
+        <img src="img/course-01.png">
+
+        <h4>자바스크립트</h4>
+        <span class="title">웹개발</span> <!--엥.. span은 옆으로 붙는대 몰랐어-->
+        <span class="price">61,000</span><br>
+        <span class="best">베스트셀러</span>
+    </div>
+
+</body>
+</html>

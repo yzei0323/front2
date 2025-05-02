@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h5, p{
+            padding: 0;
+            margin: 0;
+        }
+        .item{
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+             
+            /*  */
+            overflow: hidden; 
+
+            position: relative;
+        }
+
+        img{
+            width: 300px;
+            height: 200px; 
+        }
+
+        .desc{
+            width: 100%;
+            height: 60px;
+            border: 1px solid blue;
+
+            /* 부모를 기준으로 바닥 아래에 위치*/
+            position: absolute;
+            bottom: -60px;
+            left: 0px; 
+
+            transition: 0.5s;   /* 자연스럽게 이동 */
+        }
+
+        .item:hover .desc{
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- 아이템 -->
+    <div class="item">
+
+        <img src="img/p1.jpg">
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>title</h5>
+            <p class="likes"> 300Likes</p>
+        </div>
+    
+    </div>
+
+</body>
+</html>

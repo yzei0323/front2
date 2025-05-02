@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .box2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    
+<div class="box box1" style="background-color: blue;  "></div>
+<div class="box box2" ></div>
+<button  onclick="a()">색상 변경</button>
+
+<script>
+
+ 
+
+   function  a() {
+    const box = document.querySelector('.box'); 
+    const box2 = document.querySelector(".box2");
+    
+   
+    console.log(box2.style.backgroundColor); // "red"
+    console.log(getComputedStyle(box2).backgroundColor); // "red"
+  } 
+</script>
+
+</body>
+</html>

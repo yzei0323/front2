@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .item{
+            border: 1px solid black;
+            flex: 1;
+        }
+
+        /*모바일*/
+        @media(max-width:768px){
+            .wrap{
+                width: 100%;
+            }
+            .item:nth-child(1){
+                order: 3;  
+            }
+            .item:nth-child(2){
+                order: 1;
+            }
+            .item:nth-child(3){
+                order: 2;
+            }
+            /* 대박 순서가 바뀐다*/
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+
+</body>
+</html>
