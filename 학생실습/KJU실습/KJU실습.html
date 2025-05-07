@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인실습</title>
+    <style>
+        .header {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .logo-wrap {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .search-wrap {
+            flex: 3;
+            text-align: center;
+            margin-top: 10px
+        }
+
+        .mypage-wrap {
+            flex: 1;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .logo-wrap img {
+            width: 200px;
+            height: 60px;
+        }
+
+        .middle {
+            display: flex;
+        }
+
+        .main-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item {
+            position: relative;
+            width: 500px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .item:hover .overlay {
+            opacity: 1;
+        }
+
+        .item .overlay span {
+            font-size: 24px;
+            color: black;
+            font-weight: bold;
+        }
+
+
+        .item img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .desc {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .desc img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .desc-section {
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .title {
+            color: black;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .channel,
+        .view {
+            color: gray;
+            font-size: 13px;
+        }
+
+        @media (max-width:768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .mypage-wrap,
+            .left-section {
+                display: none;
+            }
+
+            .item {
+                width: 100%;
+            }
+
+            .thumbnail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="header">
+            <div class="logo-wrap">
+                <a href="https://www.youtube.com/">
+                    <img src="img/youtube.png">
+                </a>
+            </div>
+            <div class="search-wrap">
+                <img src="img/search.jpg">
+            </div>
+            <div class="mypage-wrap">
+                <img src="img/mypage.jpg">
+            </div>
+        </div>
+
+        <div class="middle">
+
+            <div class="left-section">
+                <img src="img/leftsection.jpg">
+            </div>
+
+            <div class="main-section">
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=q0zpxOVxDQo&t=997s">
+                        <img src="img/kahasa.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/kahasa2.jpg">
+                            <div class="desc-section">
+                                <p class="title">"뭐? 병사 한 명을 조심하라고?" "네, 징수의 총 호디르 병장은 위험합니다" New 초극딜 AD 치명타 템트리로 완성된
+                                    우디르 최종
+                                    빌드.. 이 호디르 진짜 못 막습니다 💀💀</p>
+                                <p class="channel">카사딘 하는 사람</p>
+                                <p class="view">조회수 : 9.6만회 º 19시간 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=Ok4QGOJjpKI&list=RDMMOk4QGOJjpKI&start_radio=1">
+                        <img src="img/mix.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <div class="desc-section">
+                                <p class="title">내 관련 재생 목록</p>
+                                <p class="channel">Tele,n-buna,유다빈밴드 등</p>
+                                <p class="view">오늘 업데이트 됨</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=c7kM4kmq1uc">
+                        <img src="img/4uk.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/ralo.jpg">
+                            <div class="desc-section">
+                                <p class="title">4억잃은 종말론자</p>
+                                <p class="channel">랄로</p>
+                                <p class="view">조회수 : 727만회 º 4년 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=fxGCwWcJoxo">
+                        <img src="img/weakhero.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/2minute.jpg">
+                            <div class="desc-section">
+                                <p class="title">약한영웅 클래스2 싸움광 빌런 금성제 원작과 다른 3가지 설정</p>
+                                <p class="channel">2분컷</p>
+                                <p class="view">조회수 : 3.1만회 º 21시간 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=oggHfOXItvA">
+                        <img src="img/roronoa.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/ralo.jpg">
+                            <div class="desc-section">
+                                <p class="title">롤로노아 김동현</p>
+                                <p class="channel">랄로</p>
+                                <p class="view">조회수 : 608만회 º 1년 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=zQzazlhC-XA">
+                        <img src="img/once.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/p1.jpg">
+                            <div class="desc-section">
+                                <p class="title">단 한 번만 더 다정히 날 기억해 줄래 | 𝐎𝐧𝐜𝐞 - 유다빈밴드</p>
+                                <p class="channel">피원</p>
+                                <p class="view">조회수 : 1.1만회 º 11개월 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=zrKQwMxDfg0">
+                        <img src="img/monsrat.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/monsratyou.jpg">
+                            <div class="desc-section">
+                                <p class="title">진짜에요?</p>
+                                <p class="channel">괴물쥐 유튜브</p>
+                                <p class="view">조회수 : 44만회 º 16시간 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=j7kt7MbIyao">
+                        <img src="img/8jay.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/8lja.jpg">
+                            <div class="desc-section">
+                                <p class="title">사격수 상징 코그모 이거 진짜 미쳤습니다</p>
+                                <p class="channel">팔차헌 [8LJAYWALKING]</p>
+                                <p class="view">조회수 : 22만회 º 2주 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://www.youtube.com/watch?v=T2Y6ohgrufo">
+                        <img src="img/udir.jpg" class="thumbnail">
+                        <div class="overlay"><span>동영상 보러 가기</span></div>
+                        <div class="desc">
+                            <img src="img/youngda.jpg">
+                            <div class="desc-section">
+                                <p class="title">부족한 데미지는 이걸로 채운다 / 다재다능 우디르</p>
+                                <p class="channel">용다형</p>
+                                <p class="view">조회수 : 2.4천회 º 2주 전</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

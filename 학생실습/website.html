@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        header {
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .leftHead {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .leftHead .menu {
+            background-image: url(https://ko.wikipedia.org/w/load.php?modules=skins.vector.icons&image=menu&format=original&lang=ko&skin=vector-2022&version=1n584);
+        }
+
+        header .logo {
+            color: black;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        header p {
+            margin: 0;
+            text-align: center;
+        }
+
+        header p:nth-child(1) {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .rightHead {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-right: 10px;
+        }
+
+        .headerbutton {
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            background-position: center;
+        }
+
+        .rightHead .search {
+            background-image: url(https://ko.wikipedia.org/w/load.php?modules=skins.vector.icons&image=search&format=original&lang=ko&skin=vector-2022&version=1n584);
+        }
+
+        .headerbutton:hover {
+            background-color: #e6e7e9;
+        }
+
+        .headerLink {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .rightHead .option {
+            background-image: url(https://ko.wikipedia.org/w/load.php?modules=skins.vector.icons&image=ellipsis&format=original&lang=ko&skin=vector-2022&version=1n584);
+        }
+
+        .title {
+            width: 100%;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .titleName {
+            font-weight: 500;
+            padding-left: 20px;
+        }
+
+        .lang {
+            color: #3366cc;
+            text-decoration: none;
+            font-weight: bold;
+            padding-right: 20px;
+        }
+
+        .contentText {
+            padding: 10px;
+            display: flex;
+        }
+
+        .contentText p {
+            font-size: 18px;
+            white-space: pre-line;
+        }
+
+        .contentText img {
+            width: 250px;
+            height: 300px;
+            border: 5px double rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .subTitle {
+            border-bottom: 1px solid black;
+            padding: 5px;
+        }
+
+        .subTitle h2 {
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        footer {
+            border-top: 1px solid black;
+            padding-top: 20px;
+            padding: 10px;
+        }
+
+        footer a, footer p {
+            font-size: 12px;
+            white-space: pre-line;
+        }
+
+        footer a{
+            color: #3366cc;
+            text-decoration: none;
+            padding: 8px;
+        }
+
+        @media (max-width : 640px) {
+            header .logo img {
+                display: none;
+            }
+
+            .rightHead a:nth-child(2),
+            .rightHead a:nth-child(3),
+            .rightHead a:nth-child(4) {
+                display: none;
+            }
+
+            .contentText{
+                flex-direction: column;
+            }
+
+            .contentText img {
+                order: 1;
+                margin: 0 auto;
+            }
+
+            .contentText p {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="leftHead">
+            <a href="#none" class="menu headerbutton"></a>
+            <a href="#none" class="logo">
+                <img src="https://ko.wikipedia.org/static/images/icons/wikipedia.png" alt="logo">
+                <div class="logoText">
+                    <p>위키백과</p>
+                    <p>우리 모두의 백과사전</p>
+                </div>
+            </a>
+        </div>
+        <div class="rightHead">
+            <a href="#none" class="search headerbutton"></a>
+            <a href="#none" class="headerLink">기부</a>
+            <a href="#none" class="headerLink">계정 만들기</a>
+            <a href="#none" class="headerLink">로그인</a>
+            <a href="#none" class="option headerbutton"></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="title">
+            <h2 class="titleName">웹사이트</h2>
+            <a href="#none" class="lang">139개 언어</a>
+        </div>
+        <div class="textBox">
+            <div class="contentText">
+                <p>
+                    웹사이트(영어: website, 문화어: 웨브싸이트)는 인터넷 프로토콜 기반의 네트워크에서 도메인 이름이나 IP 주소, 루트 경로만으로 이루어진 일반 URL을 통하여 보이는 웹
+                    페이지들의 의미 있는 묶음이다. 대한민국에서 흔히 말하는 홈페이지는 엄밀히 말해 웹사이트를 지칭한다. 최초의 웹사이트는 팀 버너스리가 1990년에 CERN에서 만든
+                    info.cern.ch이다. (지금도 CERN사이트 안에 존재함.)
+
+                    웹사이트는 인터넷이나 랜과 같은 네트워크를 통해 접속할 수 있는, 적어도 하나의 웹 서버 상에서 호스팅된다. 웹 페이지는 HTML/XHTML의 형식으로 표현되지만 일반적으로 순수
+                    문자열로
+                    쓰여진 문서이다. 웹 페이지는 HTTP를 통하여 접속되며 가끔씩은 HTTPS를 통한 암호화를 사용하여 웹 페이지 콘텐츠를 이용한 사람들에게 보안과 개인 정보 보호를 제공한다.
+                    사용자가
+                    이용하는 웹 브라우저는 HTML 마크업 명령을 모니터에 표시하는 그대로 페이지 내용을 표현한다.
+
+                    공식적으로 접속할 수 있는 모든 웹사이트는 총체적으로 월드 와이드 웹을 이루고 있다.
+                </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Www.wikipedia.org_screenshot.png/250px-Www.wikipedia.org_screenshot.png"
+                    alt="">
+            </div>
+        </div>
+
+        <div class="textBox">
+            <div class="subTitle">
+                <h2>역사</h2>
+            </div>
+            <div class="contentText">
+                <p>
+                    월드 와이드 웹(WWW)는 1989년 CERN의 팀 버너스리가 만들었다. 1993년 4월 30일에 CERN은 월드 와이드 웹이 누구나 자유롭게 이용할 수 있을 것이라고 선언하였다.
+                    HTML과 HTTP가 도입되기 전에 파일 전송 프로토콜과 고퍼 프로토콜과 같은 다른 프로토콜들이 서버로부터 개별 파일을 내려받는 데 쓰였다. 이러한 프로토콜들은 사용자가 탐색하고
+                    파일을 내려받는 단순한 디렉터리 구조를 제공한다. 문서는 워드 프로세서 형식 등으로 형식화되지 않은 순수 문자로만 된 글자로 표현되었다.
+                </p>
+            </div>
+        </div>
+
+        <div class="textBox">
+            <div class="subTitle">
+                <h2>info.cern.ch</h2>
+            </div>
+            <div class="contentText">
+                <p>
+                    1989년 CERN의 팀 버너스리가 만든 세계 최초의 웹 사이트로 CERN 홈페이지 안에 Welcome to info.cern.ch!이라는 제목을 가지고 있다. 이 웹사이트에서는
+                    개발자인 팀 버너스리의 소개와 생애, 연구자료, 스크린샷 등 여러 CERN의 서비스를 제공하고 있다. 그 후로, 약 24년 동안 전 세계 수억 개의 사이트가 새로 생겼으며, 지금도
+                    계속 늘어나고 있다.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="">
+            <P>
+                이 문서는 2025년 4월 3일 (목) 07:40에 마지막으로 편집되었습니다.
+
+                모든 문서는 크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0에 따라 사용할 수 있으며, 추가적인 조건이 적용될 수 있습니다. 자세한 내용은 이용 약관을 참고하십시오.
+                Wikipedia®는 미국 및 다른 국가에 등록되어 있는 Wikimedia Foundation, Inc. 소유의 등록 상표입니다.
+            </P>
+        </div>
+        <div class="">
+            <a href="">개인정보처리방침</a>
+            <a href="">위키백과 소개</a>
+            <a href="">연책 조항</a>
+            <a href="">행동 강령</a>
+            <a href="">개발자</a>
+            <a href="">통계</a>
+            <a href="">쿠키 정책</a>
+            <a href="">모바일 보기</a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./threejs.css">
+    <title>Three.js 기초 예제</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container" id = "info">
+        <h2>선택하시오</h2>
+        <p class="question-text">기차가 오고 있습니다 당신 앞에는 레버가 있으며
+            레버를 당기면 선로 앞에 있는 5명의 사람을 구할 수 있습니다.<br>
+            하지만 레버를 당기면 선로에 있는 1명의 사람이 죽습니다.
+            당신은 레버를 당길 것인가요?
+        </p>
+
+
+        <div class="item-wrap">
+            <div class="item">
+                <div class="item-title">당긴다</div>
+                <div class="item-text">한명이 죽지만 5명을 살릴 수 있으니 레버를 당긴다</div>
+                <button class="select-btn" id="btn" onclick="clickEvent()">선택</button>
+    
+            </div>
+    
+            <div class="item">
+                <div class="item-title">그대로 둔다</div>
+                <div class="item-text">다수를 생명도 중요하지만 <br>또 다른 하나의 생명도 중요하다<br>
+                    또한 레버를 당김으로 서 한 사람을 죽이게 된다고 볼 수 있어 내가 살인자가 될 수 있다
+                </div>
+                <button class="select-btn" id="btn2" onclick="clickEvent()">선택</button>
+    
+            </div>
+        </div>
+
+
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r132/three.min.js"></script>
+    
+    <script>
+      
+        
+
+        const renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            
+          
+            const scene = new THREE.Scene();
+            
+            
+            const camera = new THREE.PerspectiveCamera(
+                75,                                     
+                window.innerWidth / window.innerHeight, 
+                0.1,                                    
+                1000                                    
+            );
+            
+            camera.position.z = 5;
+            
+            const geometry = new THREE.BoxGeometry(1, 1, 1);
+            
+            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+            
+            const cube = new THREE.Mesh(geometry, material);
+
+           
+
+            
+            scene.add(cube);
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+
+            document.getElementById('btn').addEventListener('click', function(){
+                
+                cube.material.color.setHSL(Math.random(), 1, 0.5);
+                function animate() {
+                    requestAnimationFrame(animate);
+                    
+                    cube.rotation.x += 50;
+                    cube.rotation.y += 50;
+                    
+                    renderer.render(scene, camera);
+                }
+                animate();
+            });
+
+            document.getElementById('btn2').addEventListener('click', function(){
+                cube.material.color.setHSL(Math.random(), 1, 0.5);
+                function animate() {
+                    requestAnimationFrame(animate);
+                    
+                    cube.rotation.x += 50;
+                    cube.rotation.y += 50;
+                    
+                    renderer.render(scene, camera);
+                }
+                animate();
+            });
+            
+            window.addEventListener('resize', function() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        
+
+        // function clickEvent(){
+        //     alert("좋은 선택입니다");
+        // }
+
+
+        // const scene = new THREE.Scene();
+        // const sizes = {
+        //     width:window.innerWidth,
+        //     height:window.innerHeight
+
+        // };
+        // const camera = new THREE.PerspectiveCamera(75,
+        //     sizes.width / sizes.height,
+        //     0.1,
+        //     1000
+        // );
+        // camera.position.z = 2;
+        // scene.add(camera);
+
+        // const renderer = new THREE.WebGLRenderer({
+        //     antialias:true,
+        // });
+        // renderer.setSize(sizes.width, sizes.height);
+        // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        // renderer.setClearColor(new THREE.Color('#21282a'),1);
+        // document.body.appendChild(renderer.domElement);
+
+        // window.addEventListener('resize', () => {
+        //     sizes.width = window.innerWidth;
+        //     sizes.height = window.innerHeight;
+
+        //     camera.aspect = sizes.width / sizes.height;
+        //     camera.updateProjectionMatrix();
+
+        //     renderer.setSize(sizes.width, sizes.height);
+        //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        // });
+
+        // const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
+        // const material = new THREE.PointsMaterial({
+        //     size:0.005,          
+        //     color: 0x87a7ca,
+        // });
+
+        // const particlesGeometry = new THREE.BufferGeometry();
+        // const loader = new THREE.TextureLoader();
+        // // const star = loader.load("./star.png");
+        // const particlesMaterial = new THREE.PointsMaterial({
+        //     size: 0.01,
+        //     // map: star,
+        //     transparent: true,
+
+        // });
+
+        // const particlesCount = 700;
+        // const posArray = new Float32Array(particlesCount * 3);
+        // for(let i = 0; i < particlesCount * 3; i++){
+        //     posArray[i] = (Math.random() - 0.5) * (Math.random() * 5);
+        // }
+
+        // particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        // const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+        // scene.add(particles);
+        // const torus = new THREE.Points(geometry, material);
+        // scene.add(torus);
+        // function animate() {
+        //     requestAnimationFrame(animate);
+        //     torus.rotation.x += 0.01;
+        //     torus.rotation.y += 0.01;
+        //     torus.rotation.z += 0.01;
+        //     particles.rotation.x += 0.001;
+        //     particles.rotation.y += 0.001;
+        //     renderer.render(scene, camera);
+        // }
+        // animate();
+
+        // document.getElementById('btn').addEventListener('click', function(){
+        //     alert("좋은 선택입니다");
+        //     torus.material.color.setHSL(Math.random(), 1, 0.5);
+            
+        // });
+        // document.getElementById('btn2').addEventListener('click', function(){
+        //     alert("좋은 선택입니다");
+        //     torus.material.color.setHSL(Math.random(), 1, 0.5);
+            
+        // });
+
+
+        
+    </script>
+
+    
+</body>
+</html>

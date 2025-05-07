@@ -1,0 +1,170 @@
+/* 전체 서식 */
+.eventBanner, .popularMenu
+{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+/* 이벤트 배너 */
+.eventBanner
+{
+    background-image: url("/CAFE_ACORN/resources/index/eventBanner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.eventBanner-content
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 가입 버튼 */
+.membership
+{
+    width: 500px;
+    height: 100px;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    color: #5D4037;
+}
+.membership:hover
+{
+    color: #8D6E63;
+    
+    cursor: pointer;
+}
+
+/* 멤버십 정보 */
+.membership-info
+{
+    padding-top: 10px;
+    border-top: 1px solid white;
+
+    font-size: 30px;
+    text-align: center;
+    color: #3E2723;
+}
+
+
+
+/* 인기 메뉴 */
+.popularMenu
+{
+    margin: 20px 0 20px 0;
+
+    display: flex;
+}
+.popularMenu-title, .popularMenu-content
+{
+    height: 100%;
+    padding: 20px;
+}
+
+/* 제목 */
+.popularMenu-title
+{
+    width: 20%;
+
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.pc-only { display: block; }
+.mobile-only { display: none; }
+
+/* 메뉴 목록 */
+.popularMenu-content
+{
+    width: 80%;
+
+    display: flex;
+}
+.item
+{
+    width: 33.3%;
+    border-radius: 10px;
+
+    border: 1px solid #3E2723;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+.item:hover { border: 2px solid #3E2723; }
+.item:nth-child(1) { background-image: url("/CAFE_ACORN/resources/menu/아메리카노.png"); }
+.item:nth-child(2)
+{
+    background-image: url("/CAFE_ACORN/resources/menu/카페라떼.png");
+    margin: 0 10px 0 10px;
+}
+.item:nth-child(3) { background-image: url("/CAFE_ACORN/resources/menu/카페모카.png"); }
+.textWrap
+{
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+
+    border-top: 1px solid #3E2723;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 0 10px 10px;
+    
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+/* 모바일 대응 */
+@media (max-width: 768px)
+{
+    /* 이벤트 배너 */
+    .eventBanner, .popularMenu { height: 200px; }
+    .membership { font-size: 36px; }
+    .membership-info { font-size: 20px; }
+
+    /* 인기 메뉴 */
+    .popularMenu, .popularMenu-title, .popularMenu-content { height: auto; }
+    .popularMenu, .popularMenu-content
+    {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .popularMenu-title, .popularMenu-content 
+    {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+    .pc-only { display: none; }
+    .mobile-only { display: block; }
+    .item
+    {
+        width: 100%;
+        height: 200px;
+        margin: 10px 0 !important;
+    }
+    .textWrap
+    {
+        height: 60px;
+        
+        font-size: 14px;
+        line-height: 30px;
+    }
+}

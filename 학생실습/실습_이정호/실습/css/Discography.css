@@ -1,0 +1,63 @@
+/*디스코그래피*/
+.discography-list{
+    width: 1300px;
+    margin: 0 auto;
+}
+.discography-list h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.discography{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.album{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px;
+}
+.album img{
+    width: 300px;
+}
+.hidden{
+    color: white;
+    background-color: black;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: -300px;
+    opacity: 0.7;
+}
+.album:hover .hidden{
+    bottom: 0px;
+    transition: 0.5s;
+}
+
+.mainPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+/*반응형*/
+@media (max-width : 768px){
+    .discography-list{
+        width: 330px;
+    }
+    .discography-list h1{
+        text-align: center;
+    }
+    .mainPic img{
+        width: 400px;
+    }
+
+}

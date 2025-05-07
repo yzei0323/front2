@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폭싹속았수다</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        header {
+            margin: 0 auto;
+            position: relative;
+            width: 1280px;
+            height: 700px;
+            overflow: hidden;
+
+            /* border: 1px solid red; */
+        }
+
+        .drama-img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+
+            background-image: url("https://occ-0-395-988.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABelyxuKLVyPUMhSKyOWNVbxK23echZ96LHOGdzuKlb-WyKndRutYEoj3uT_WtYPiZxJt7KF2_raaPgiUn52jRGWPfOXeCCeWg92A.webp?r=7b2");
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+
+            z-index: -1;
+        }
+
+        .header-gra {
+            height: 70px;
+            box-sizing: border-box;
+            background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0));
+
+        }
+
+        .header-gra img {
+            width: 100px;
+            margin-top: 10px;
+        }
+
+        .n-title {
+            width: 500px;
+            height: 200px;
+
+            position: absolute;
+            left: 40px;
+            bottom: 180px;
+        }
+
+        .gradation {
+            position: absolute;
+            bottom: 0px;
+            z-index: 20;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+        }
+
+        .intro{
+            display: flex;
+            justify-content: space-around;
+            
+            width: 1280px;
+            margin: 20px auto;
+            
+        }
+
+        .episode-wrap {
+            margin: 50px auto;
+            width: 1500px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .episode {
+            width: 750px;
+            height: 250px;
+            border-radius: 10px;
+            padding: 25px;
+
+            box-sizing: border-box;
+            display: flex;
+
+            transition: 0.2s;
+
+            /* border: 1px solid red; */
+        }
+
+        .episode img {
+            border-radius: 10px;
+            width: 320px;
+            height: 200px;
+
+            flex: 1;
+        }
+
+        .e-field {
+            flex: 3;
+            padding: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .episode:hover {
+            transform: scale(1.05);
+            background-color: rgb(29, 29, 29);
+        }
+
+        .viewing-info{
+            width: 1280px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .viewing-info img{
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px){
+            header{
+                width: 100%;
+
+            }
+            .intro{
+                width: 100%;
+                flex-direction: column;
+            }
+            .series-info{
+                padding-top: 20px;
+                padding-left: 10px;
+            }
+            .n-title{
+                width: 60vw;
+                height: 20vw;
+            }
+            .episode-wrap{
+                width: 100%;
+            }
+            .episode{
+                
+                height: 550px;
+                flex-direction: column;
+            }
+            .episode img{
+                width: 100%;
+                height: 100%;
+            }
+            .e-field {
+                box-sizing: content-box;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-gra">
+            <img src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production/consent/87b6a5c0-0104-4e96-a291-092c11350111/01938dc4-59b3-7bbc-b635-c4131030e85f/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+                alt="logo-img">
+
+        </div>
+        <div class="drama-img">
+            <img class="n-title"
+                src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABR1KFe2EHgtqvDn_EDpKxiRP8H6af0twJfzjhM-rQKSYihfdkbWEl-vpeJ7Wj3zbZmqlrz4QGFvqrCLuDQjJzCWxF8Qdkd8Xi0is_0ZOR8loNLOgFuinGw_mBR2dT72VLMk0ye30GLKRy0nFz6PUhFEyPB9FNHzEiPs1_j9SV7pV_7K4u1rM.webp?r=1ee">
+        </div>
+        <div class="gradation">
+
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="viewing-info">
+            <img src="https://s3.amazonaws.com/prod-cdata-secure.sprinklr.com/DAM/3877/8d18570f-e62f-4eb7-b03b-f637377b9365-860980633/icon_ratings_KR_12_en.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLWVhc3QtMSJGMEQCIGp8R4EMUHBD1JELC0tqoqjubW6ANQKVr7hJLyWYmtxIAiAQNsYORBcrOLFIA%2BfbYUL%2BtLhQo1Bmjm%2FTBh8fhh9yayq6BQjQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDg2OTM2NzQ3MTY3NCIMKyZ%2BnuBglg1%2BGRJ%2FKo4F11glKtKJ53z0ns3TWd%2B24vVf6QcJpQr5w5jiGPUraVrBeYEMHdtGL74RV%2FBsw6Z7L3Q0I5RZmyf%2Bqb51gQSrUfn%2FSHIre3U1AI5lN2gQtVvzVcpxq80yBI5BXn%2F0zAkK8pI7pkXBD1GNhRIyfN%2FW2tgVecMEb2uzNmFzllc4jZwkJekESoPodudyyAhfqxVpBrBxT8ST%2Bm3Rs3smx8BoW9YDJfJhW3k%2FVf9jazlSNz89n7p25zV5NlwvQLYv%2BzcwDpChzD7AAeL%2FtfOKtcNl6YyF2i5JeWVhPfhzMtVwQPa7fCGx%2F2vzU%2B4cX3Rw8EIkxICcXvW740hcRkahn2Xmnw2e9E088al0g56m22%2FYXmikA%2Fl8dFrcX1Wf04kn0fCoJXRX7IJfZliO4DK7Fiv4gmdSrdwI2a0MGo%2B5pCw4Yxp529GGa7yZrKdkJp4HcJZ4ISUGxne9yG7I3mvEsYFBCKcrechGl1up6YU88EuzFF3hZ11PstJJOHDzJmx07kboLUiyifj799SW3D1YpsAX4naPPE%2BXB6kqDIWOiG6I2FcRVVbEkZL7WlKWUPokAgbCcXV9ej6%2FmrEDxIpqWWvwlW1inZHsV%2FoNbk7Qd%2F1nhxx74n1Bu3Wb%2BaPc9KPOUjyg%2B70p%2B%2BLSA5BJe4WOXLkpOwbmKANwYJrdMEo%2BF5BmdoIbfRHcBoWw6Xxrr37p2abFI3CEE6gD%2FxRA%2BLSEkZiFEoViuUkMtIA7Q6lzzRE2udMAo5fpv65NWM%2FDM0e1NZ1C7hFGttVxT5dheSaa78UmD8CGk7mh7TwW3qJbIeDN0c807zghRLPqxuDJ2w8TVdIE1coMQzEoFqlB%2FFY3B%2FKXUaM%2FJZIvUzv0alQ8JM2HMLPU0cAGOrIBWX8FRkTWK71iUWLhnQloSEp0VIA8cczRjuechnObAjIDpxzoPYqzVQziDZLrvzHGml%2FZYAgHfnimpbLjdQwwhHZ87Kny9ukHXx4Tr4EZ2P9z9eeKnHh5PCXQbnZyIDt6Ml6hm5NLXmogM2QuGhkfgWzAUHmrYaZrYQqNzB7bjhxV1ABLz%2Fjd7kNrVdOnUFeyuWbR3lRwQpQtdV%2FBD6KMvIe0NbQL7RVBKcWqxAfrE3hL%2Bg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250502T072709Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=ASIA4U2SW3Y5CSLMLGBD%2F20250502%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9b17a161ca52a2050c00d8d48795ccfd9ed3b3e8cf9b13682ed20ab05174d88e" alt="">
+            <img src="https://s3.amazonaws.com/prod-cdata-secure.sprinklr.com/DAM/3877/8d18570f-e62f-4eb7-b03b-f637377b9365-860980633/icon_ratings_KR_12_en.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLWVhc3QtMSJGMEQCIGp8R4EMUHBD1JELC0tqoqjubW6ANQKVr7hJLyWYmtxIAiAQNsYORBcrOLFIA%2BfbYUL%2BtLhQo1Bmjm%2FTBh8fhh9yayq6BQjQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDg2OTM2NzQ3MTY3NCIMKyZ%2BnuBglg1%2BGRJ%2FKo4F11glKtKJ53z0ns3TWd%2B24vVf6QcJpQr5w5jiGPUraVrBeYEMHdtGL74RV%2FBsw6Z7L3Q0I5RZmyf%2Bqb51gQSrUfn%2FSHIre3U1AI5lN2gQtVvzVcpxq80yBI5BXn%2F0zAkK8pI7pkXBD1GNhRIyfN%2FW2tgVecMEb2uzNmFzllc4jZwkJekESoPodudyyAhfqxVpBrBxT8ST%2Bm3Rs3smx8BoW9YDJfJhW3k%2FVf9jazlSNz89n7p25zV5NlwvQLYv%2BzcwDpChzD7AAeL%2FtfOKtcNl6YyF2i5JeWVhPfhzMtVwQPa7fCGx%2F2vzU%2B4cX3Rw8EIkxICcXvW740hcRkahn2Xmnw2e9E088al0g56m22%2FYXmikA%2Fl8dFrcX1Wf04kn0fCoJXRX7IJfZliO4DK7Fiv4gmdSrdwI2a0MGo%2B5pCw4Yxp529GGa7yZrKdkJp4HcJZ4ISUGxne9yG7I3mvEsYFBCKcrechGl1up6YU88EuzFF3hZ11PstJJOHDzJmx07kboLUiyifj799SW3D1YpsAX4naPPE%2BXB6kqDIWOiG6I2FcRVVbEkZL7WlKWUPokAgbCcXV9ej6%2FmrEDxIpqWWvwlW1inZHsV%2FoNbk7Qd%2F1nhxx74n1Bu3Wb%2BaPc9KPOUjyg%2B70p%2B%2BLSA5BJe4WOXLkpOwbmKANwYJrdMEo%2BF5BmdoIbfRHcBoWw6Xxrr37p2abFI3CEE6gD%2FxRA%2BLSEkZiFEoViuUkMtIA7Q6lzzRE2udMAo5fpv65NWM%2FDM0e1NZ1C7hFGttVxT5dheSaa78UmD8CGk7mh7TwW3qJbIeDN0c807zghRLPqxuDJ2w8TVdIE1coMQzEoFqlB%2FFY3B%2FKXUaM%2FJZIvUzv0alQ8JM2HMLPU0cAGOrIBWX8FRkTWK71iUWLhnQloSEp0VIA8cczRjuechnObAjIDpxzoPYqzVQziDZLrvzHGml%2FZYAgHfnimpbLjdQwwhHZ87Kny9ukHXx4Tr4EZ2P9z9eeKnHh5PCXQbnZyIDt6Ml6hm5NLXmogM2QuGhkfgWzAUHmrYaZrYQqNzB7bjhxV1ABLz%2Fjd7kNrVdOnUFeyuWbR3lRwQpQtdV%2FBD6KMvIe0NbQL7RVBKcWqxAfrE3hL%2Bg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250502T072709Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=ASIA4U2SW3Y5CSLMLGBD%2F20250502%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9b17a161ca52a2050c00d8d48795ccfd9ed3b3e8cf9b13682ed20ab05174d88e" alt="">
+            <img src="https://s3.amazonaws.com/prod-cdata-secure.sprinklr.com/DAM/3877/8d18570f-e62f-4eb7-b03b-f637377b9365-860980633/icon_ratings_KR_12_en.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLWVhc3QtMSJGMEQCIGp8R4EMUHBD1JELC0tqoqjubW6ANQKVr7hJLyWYmtxIAiAQNsYORBcrOLFIA%2BfbYUL%2BtLhQo1Bmjm%2FTBh8fhh9yayq6BQjQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDg2OTM2NzQ3MTY3NCIMKyZ%2BnuBglg1%2BGRJ%2FKo4F11glKtKJ53z0ns3TWd%2B24vVf6QcJpQr5w5jiGPUraVrBeYEMHdtGL74RV%2FBsw6Z7L3Q0I5RZmyf%2Bqb51gQSrUfn%2FSHIre3U1AI5lN2gQtVvzVcpxq80yBI5BXn%2F0zAkK8pI7pkXBD1GNhRIyfN%2FW2tgVecMEb2uzNmFzllc4jZwkJekESoPodudyyAhfqxVpBrBxT8ST%2Bm3Rs3smx8BoW9YDJfJhW3k%2FVf9jazlSNz89n7p25zV5NlwvQLYv%2BzcwDpChzD7AAeL%2FtfOKtcNl6YyF2i5JeWVhPfhzMtVwQPa7fCGx%2F2vzU%2B4cX3Rw8EIkxICcXvW740hcRkahn2Xmnw2e9E088al0g56m22%2FYXmikA%2Fl8dFrcX1Wf04kn0fCoJXRX7IJfZliO4DK7Fiv4gmdSrdwI2a0MGo%2B5pCw4Yxp529GGa7yZrKdkJp4HcJZ4ISUGxne9yG7I3mvEsYFBCKcrechGl1up6YU88EuzFF3hZ11PstJJOHDzJmx07kboLUiyifj799SW3D1YpsAX4naPPE%2BXB6kqDIWOiG6I2FcRVVbEkZL7WlKWUPokAgbCcXV9ej6%2FmrEDxIpqWWvwlW1inZHsV%2FoNbk7Qd%2F1nhxx74n1Bu3Wb%2BaPc9KPOUjyg%2B70p%2B%2BLSA5BJe4WOXLkpOwbmKANwYJrdMEo%2BF5BmdoIbfRHcBoWw6Xxrr37p2abFI3CEE6gD%2FxRA%2BLSEkZiFEoViuUkMtIA7Q6lzzRE2udMAo5fpv65NWM%2FDM0e1NZ1C7hFGttVxT5dheSaa78UmD8CGk7mh7TwW3qJbIeDN0c807zghRLPqxuDJ2w8TVdIE1coMQzEoFqlB%2FFY3B%2FKXUaM%2FJZIvUzv0alQ8JM2HMLPU0cAGOrIBWX8FRkTWK71iUWLhnQloSEp0VIA8cczRjuechnObAjIDpxzoPYqzVQziDZLrvzHGml%2FZYAgHfnimpbLjdQwwhHZ87Kny9ukHXx4Tr4EZ2P9z9eeKnHh5PCXQbnZyIDt6Ml6hm5NLXmogM2QuGhkfgWzAUHmrYaZrYQqNzB7bjhxV1ABLz%2Fjd7kNrVdOnUFeyuWbR3lRwQpQtdV%2FBD6KMvIe0NbQL7RVBKcWqxAfrE3hL%2Bg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250502T072709Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=ASIA4U2SW3Y5CSLMLGBD%2F20250502%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9b17a161ca52a2050c00d8d48795ccfd9ed3b3e8cf9b13682ed20ab05174d88e" alt="">
+            <img src="https://s3.amazonaws.com/prod-cdata-secure.sprinklr.com/DAM/3877/8d18570f-e62f-4eb7-b03b-f637377b9365-860980633/icon_ratings_KR_12_en.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLWVhc3QtMSJGMEQCIGp8R4EMUHBD1JELC0tqoqjubW6ANQKVr7hJLyWYmtxIAiAQNsYORBcrOLFIA%2BfbYUL%2BtLhQo1Bmjm%2FTBh8fhh9yayq6BQjQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDg2OTM2NzQ3MTY3NCIMKyZ%2BnuBglg1%2BGRJ%2FKo4F11glKtKJ53z0ns3TWd%2B24vVf6QcJpQr5w5jiGPUraVrBeYEMHdtGL74RV%2FBsw6Z7L3Q0I5RZmyf%2Bqb51gQSrUfn%2FSHIre3U1AI5lN2gQtVvzVcpxq80yBI5BXn%2F0zAkK8pI7pkXBD1GNhRIyfN%2FW2tgVecMEb2uzNmFzllc4jZwkJekESoPodudyyAhfqxVpBrBxT8ST%2Bm3Rs3smx8BoW9YDJfJhW3k%2FVf9jazlSNz89n7p25zV5NlwvQLYv%2BzcwDpChzD7AAeL%2FtfOKtcNl6YyF2i5JeWVhPfhzMtVwQPa7fCGx%2F2vzU%2B4cX3Rw8EIkxICcXvW740hcRkahn2Xmnw2e9E088al0g56m22%2FYXmikA%2Fl8dFrcX1Wf04kn0fCoJXRX7IJfZliO4DK7Fiv4gmdSrdwI2a0MGo%2B5pCw4Yxp529GGa7yZrKdkJp4HcJZ4ISUGxne9yG7I3mvEsYFBCKcrechGl1up6YU88EuzFF3hZ11PstJJOHDzJmx07kboLUiyifj799SW3D1YpsAX4naPPE%2BXB6kqDIWOiG6I2FcRVVbEkZL7WlKWUPokAgbCcXV9ej6%2FmrEDxIpqWWvwlW1inZHsV%2FoNbk7Qd%2F1nhxx74n1Bu3Wb%2BaPc9KPOUjyg%2B70p%2B%2BLSA5BJe4WOXLkpOwbmKANwYJrdMEo%2BF5BmdoIbfRHcBoWw6Xxrr37p2abFI3CEE6gD%2FxRA%2BLSEkZiFEoViuUkMtIA7Q6lzzRE2udMAo5fpv65NWM%2FDM0e1NZ1C7hFGttVxT5dheSaa78UmD8CGk7mh7TwW3qJbIeDN0c807zghRLPqxuDJ2w8TVdIE1coMQzEoFqlB%2FFY3B%2FKXUaM%2FJZIvUzv0alQ8JM2HMLPU0cAGOrIBWX8FRkTWK71iUWLhnQloSEp0VIA8cczRjuechnObAjIDpxzoPYqzVQziDZLrvzHGml%2FZYAgHfnimpbLjdQwwhHZ87Kny9ukHXx4Tr4EZ2P9z9eeKnHh5PCXQbnZyIDt6Ml6hm5NLXmogM2QuGhkfgWzAUHmrYaZrYQqNzB7bjhxV1ABLz%2Fjd7kNrVdOnUFeyuWbR3lRwQpQtdV%2FBD6KMvIe0NbQL7RVBKcWqxAfrE3hL%2Bg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250502T072709Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=ASIA4U2SW3Y5CSLMLGBD%2F20250502%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9b17a161ca52a2050c00d8d48795ccfd9ed3b3e8cf9b13682ed20ab05174d88e" alt="">
+            <h2>12세 관람가</h2>
+        </div>
+        <div class="series-info">
+            <p><span style="color: rgb(61, 60, 60);">출연: </span>아이유, 박보검, 문소리, <span style="font-style: italic;">더보기</span></p>
+            <p><span style="color: rgb(61, 60, 60);">장르: </span>로맨틱한 드라마, 드라마, 한국드라마</p>
+            <p><span style="color: rgb(61, 60, 60);">시리즈 특징: </span>향수자극, 달콤 쌉싸름, 감정을 파고드는</p>
+        </div>
+    </div>
+    <div class="episode-wrap">
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWTnqYkRomlIviiMVdqcknvQF43OeYs1PQLUQfZD7iwt_Kokcjn7bPDwOW9i1gTWlubm2c4YxSeHG98Kg64AXb4rXe6elcIOjA4yyqRrZRPmXKqVTF8gwV-q.jpg?r=543"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>호로록 봄</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>억척스러운 어머니 아래서 야무지고 똘똘하게 자란난 애순. 그 작은 마음속에 헤아릴 수 없도록 많은 꿈을 품고 산다. 하지만 자꾸 서러운 일들이 닥치며 어린 애순을
+                        힘들게 한다</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcpQy44E5LW5_7_EAnCj99PIDKoRaRflKk1IzIEhEFwzUWMouI7JQcBKmbNrvYlqkoNshemWPFWq4CYl5fVYqjmymL7w-CXh4XNxUY35qTlAF1L9DwXkZZbm.jpg?r=8d2"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>요망진 첫사랑</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>애순과 관식 사이에 유채꽃처럼 환한 사랑이 피어난다. 인생은 낙장불입, 굳게 마음먹고 사랑의 모험을 감행하는 두 청춘. 그런데 인생은 예측 불허, 첫걸음부터 험한
+                        고비에 부닥칠 줄이야.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYR42MXeTutllAeC8XiBA9VlsSlReadWYD3ZOq_bmIC3mruZDHKGuzQlvDgSV5cZNZ5-j1gR1IVU4g1N5dRg6KweHQ0qjuDF4gukuvJcHjP5k8nhA6m4Zjwb.jpg?r=665"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>예스터데이. “그들의 봄은…”</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>떠들썩한 소동 끝에 제주로 돌아온 애순과 관식. 마음대로 되는 게 하나 없는 애순은 말도 안 되는 운명에 자신을 내맡기려 한다. 애순만 보고 살던 관식은 애타는 마음을
+                        어찌하면 좋을까.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABTb4ughJ2q2pYzx2AX_XdAFZv9pLA9kvff12DEZpMt2e2AGjislvs9Je6UVDEVqpx8U109GjtFzpc44uCw-QplHfUPY9UGwKfTpCtXQOzvKL7X-EuZA-Kinw.jpg?r=5ea"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>꽈랑꽈랑 여름</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>화창한 여름날과 더불어 행복을 꿈꾸던 신혼부부. 하지만 시집살이란 그리 녹록하지가 않다. 모진 구박을 받으면서도 애순은 아이에게만은 다른 인생을 선물하고 싶다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWLnwog0D82HmUS_UDN2aPA4w8UB-QZRuZzg_xXGIZqDf_MF9n_97PmshKLQQ1TGompbsEGpkZ7PQf3fN3HpFJlu-dLRLGFs2oYvxDBwLDx1xHwNfxIQN6si.jpg?r=3c6"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>한여름 밤의 만선</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>관식은 어떻게든 일자리를 구하려 애쓰고 애순은 가족 걱정에 눈물이 난다. 피가 마르는 그 순간, 두 사람에게 찾아든 한 줄기 희망. 애순은 제주에서 활짝 날개를 펴고
+                        날아오르려 한다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABf4fNiGW9HuNaiFDpaZ0KXDejlaY4HBcjLgyXy9GxfzL2bgXA4eN26soBmehh7yGsA61s2sLju7yRVwEHIl3-S98Vr7ITsq6guAWv6-1KbeK-peQXSZNBoJb.jpg?r=a64"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>살민 살아진다</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>새로운 인생의 기쁨을 맛보며 날마다 행복한 애순과 관식. 하지만 하늘이 변덕을 부리던 어느 여름날, 어린 부부에게 사나운 태풍이 몰아친다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbBQwsPS3FVpFnQe7BReQDluCw06ZUfXz2kASOFB-pC5ik200sHCNhsC9I68DYx1T426B5IH2nmsomRlb-NgBiaub4p5KNvc5dt3AclWXmXEjvs0G-CAyR2V.jpg?r=10c"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>자락자락 가을</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>구린 구석이 많은 상대 후보에 맞서, 애순이 도동리 최초 여성 계장에 도전한다. 한편, 생각지도 못한 유혹을 받는 금명. 엄청난 대가 앞에 금명의 양심이 시험에 든다.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABVlCg07g20quIeXGE8CFx2ExG7UBdrYNamH70Yam5M26KA1q7AycK3zqXccahI5a7dIxa6WICfh_JjG8el3IX7j3qDCnVIuAWvHFA2oNFnCYk6MmoxS8eGWd.jpg?r=e91"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>변하느니 달이요, 마음이야 늙겠는가</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>하고 싶은 것도 많고 되고 싶은 것도 많은 금명. 드디어 일본에서 유학할 기회를 얻는다. 어쩌면 애순과 관식도 오랫동안 바라왔던 꿈을 하나 이룰 수 있을 것 같다.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWzDdtt8ulA8tOIlhkTXgbNDEy_wrH8vfh6JZpNgGTHrLpiDPwxvVneccIylrKa37PbVWpZ-NaRER9y4uABpKa7X6jxfPYKhdeSNHSJjePiks7H28GJBR4ZJ.jpg?r=3e6"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>바람은 왱왱왱 마음은 잉잉잉</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>비좁은 아파트에서 복닥거리며 사는 애순과 관식. 어딘가 관식을 닮은 10대 아들 은명 때문에 두 사람은 새로운 시험과 맞닥뜨린다. 한편, 금명은 새로운 기대와 함께
+                        서울 생활을 시작한다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcGJC2QF8OGcCvaKLlz7HsxeYu0IUpqdQ_a_crYfhPWe9RksUydL5GmE7yYIlQwlYtPL2m-2989b7meHZ0FmiZucNELm65e3Qn12WNtQXVAadfL61ERRSkel.jpg?r=6d2"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>품 안의 바람 품 안의 사랑</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>금명은 남다른 인연으로 만난 동료와 점점 가까워진다. 밤마다 찾아오는 불길한 꿈에 걱정을 떨치지 못하는 애순. 엄마의 직감이 뭔가를 알려주려 하는지도 모른다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdKIk0Hj24EljDyuCTzsy6_D0Zo-IcsV13pF_poVLtHq4soV_p5DmEGb9MUm1P54BRvJ0E9v8VuFdjLS0ltgkUQHBvyLmVb-nqHMhkW4wVOgBrSza_JnUNiI.jpg?r=a2e"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>내 사랑 내 곁에</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>변함없이 자신을 아껴주는 연인과 결혼을 준비하는 금명. 하지만 마음 깊은 곳 불안함은 어찌할 수가 없다. 애순의 첫사랑이 그랬듯이, 금명의 첫사랑도 행복한 결말을 맞을
+                        수 있을까.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABaacuY31f_-MQiiFAjDqZpSVE99CRuvLyR7_mixJ8mJDyamQJtvU16sFar6y7JTMiwIhJBYaRpTXoPncExYi-zObLfiYBtg8hQFEDxZJcdUytoDTae3Mh9Oz.jpg?r=fea"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>펠롱펠롱 겨울</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>상처가 남은 채로 제주에 내려온 금명. 오랜만에 어린 시절로 돌아간 듯 부모와 따뜻한 시간을 보낸다. 속절없이 흐르는 세월 속에 애순은 사랑하는 이들과 보내는 시간이
+                        새삼 소중해진다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABT8uSevW9rcBLbVIi9vQiFEhiF4z1ueqTWgm41AtDC4qrw-i_tBfWe4gGahkKc8VVqybeBCOXxI0j9eglIBi3ZfEUZfr1JkI7R0ZqC73Q8H_ryv5JxcSStCG.jpg?r=556"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>그추룩 짝사랑</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>경기 침체가 계속되면서 금명의 일자리에도 문제가 생긴다. 좀처럼 빛이 들지 않던 어느 날, 우연히 낯익은 사람과 마주치는 금명. 금명의 인생에 예상치 못했던 새로운
+                        시작이 찾아든다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABXDG-25l_b2Lgj3yNWrPuQto6gVkYwxCybAKLNfido6y2ptnDy7NDVuvZq8l3NiUU8styDCu-XnWPJZ0_RJ44c79i2iQoPTcUHBrSz4OH9GKgM-OLbzKT4Xu.jpg?r=57a"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>훨훨 날라, 훨훨 날아 보켜</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>감당 못 할 불운에 발이 걸려 넘어진 은명. 그런 아들을 구하기 위해 애순과 관식은 무엇이든 내던질 각오를 한다. 또다시 빈손이 되더라도, 온 가족이 똘똘 뭉쳐 헤쳐
+                        나갈 수 있을 테니까.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdSm4p2YFb2VhmGhdrWdzxbixXkRdjEuOiMXvO9-EqXBDhzKTcyYCVkpkLipX9XygUeKNKGFAWyBzo-LiHP-g8J_ntErWE45RKML6WipgFpWBtFUq4pr1DgN.jpg?r=09f"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>만날, 봄</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>사업을 시작하거나 과감한 선택을 하며 식구들이 일제히 사고를 친다. 그 길에서 만난 저마다의 장애물. 아무리 힘들어도 가족이 있기에, 주먹을 불끈 쥐고 모두 함께
+                        앞으로 나아간다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="episode">
+
+            <img src="https://occ-0-395-988.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABar50v65KGJmB3IVp-WqDGW-WZOkqJh3CMoc6ozn5ahyk6lXBpqueMDQEuek5fpL1TU-WnabaV9MubNINQ8Npk5Ks5oJbtenpakXbU5e-HGVtE2yTJIHmu33.jpg?r=8af"
+                alt="">
+            <div class="e-field">
+                <div class="e-title">
+                    <h3>폭싹 속았수다</h3>
+                </div>
+                <div class="e-synopsis">
+                    <p><br>그동안 고생한 보람이 한꺼번에 돌아오나 보다. 몸은 고되어도 웃음이 절로 나고 천년만년 살고 싶은 나날, 느닷없는 시련이 가족들을 덮친다. 이번에도 무쇠 같은 의지와
+                        사랑으로 견뎌낼 수 있을까.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글이 되고 싶은 네이버</title>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        nav {
+            height: 100px;
+            background-color: aliceblue;
+            margin-top: 50px;
+
+            position: relative;
+        }
+
+
+        .menu {
+            padding: 0px;
+
+            margin: 0px;
+            /* border: 1px solid black; */
+            list-style: none;
+            display: flex;
+
+            /*수직정렬*/
+            align-items: center;
+
+            /**/
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .item1 {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background-image: url(/day2prac/imgs/gmail.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+            border-radius: 50%;
+        }
+
+        .item2 {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background-image: url(/day2prac/imgs/drive.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+            border-radius: 50%;
+        }
+
+        .item3 {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background-image: url(/day2prac/imgs/searchg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+            border-radius: 50%;
+        }
+
+        .item1:hover {
+            background-color: #ccc;
+            box-shadow: 0px 0px 10px 10px rgb(197, 194, 193);
+            transform: scale(1.2);
+        }
+
+        .item2:hover {
+            background-color: #ccc;
+            box-shadow: 0px 0px 10px 10px rgb(197, 194, 193);
+            transform: scale(1.2);
+        }
+
+        .item3:hover {
+            background-color: #ccc;
+            box-shadow: 0px 0px 10px 10px rgb(197, 194, 193);
+            transform: scale(1.2);
+        }
+
+        .title {
+
+            text-align: center;
+        }
+
+        .search_img {
+            width: 50px;
+            height: 50px;
+            background-image: url(/day2prac/imgs/search.png);
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .search_bar {
+            width: 600px;
+            height: 60px;
+            border: 1px solid grey;
+            border-radius: 40px;
+
+            margin: 0 auto;
+            margin-top: 50px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .search_bar input {
+            width: 70%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .search_bar:hover {
+            box-shadow: 0px 0px 10px 10px rgb(197, 194, 193);
+        }
+
+        .title .logo {
+            width: 280px;
+            height: 100px;
+            background-image: url(https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+        }
+
+        .bottom {
+            margin-top: 40px;
+            /* border: 1px solid black; */
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .bottom2 {
+            display: none;
+        }
+
+        .gpt {
+            width: 65px;
+            height: 100px;
+            /* border-radius: 50px; */
+            /* border: 1px solid black; */
+            background-image: url(/day2prac/imgs/gptlogo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .github {
+            width: 65px;
+            height: 100px;
+            /* border-radius: 50px; */
+            /* border: 1px solid black; */
+            background-image: url(/day2prac/imgs/github.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .acorn {
+            width: 100px;
+            height: 100px;
+            /* border-radius: 50px; */
+            /* border: 1px solid black; */
+            background-image: url(/day2prac/imgs/acornlogo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+
+
+
+
+
+        @media(max-width: 1000px) {
+            .title .logo {
+                background-image: url("/day2prac/imgs/naverlogo.jpg");
+                background-size: cover;
+            }
+
+            nav {
+                background-color: #8ae79e;
+            }
+
+            .menu {
+                left: 0px;
+            }
+
+            .menu:nth-child(1) {
+                background-color: rgb(15, 211, 90);
+            }
+
+            .item1:hover {
+                background-color: #8ae79e;
+                box-shadow: 0px 0px 10px 10px rgb(1, 252, 1);
+            }
+
+            .item2:hover {
+                background-color: #8ae79e;
+                box-shadow: 0px 0px 10px 10px rgb(1, 252, 1);
+            }
+
+            .item3:hover {
+                background-color: #8ae79e;
+                box-shadow: 0px 0px 10px 10px rgb(1, 252, 1);
+            }
+
+
+
+            .item1 {
+                background-image: url(/day2prac/imgs/nmail.png);
+            }
+
+            .item2 {
+                background-image: url(/day2prac/imgs/nblog.png);
+            }
+
+            .item3 {
+                background-image: url(/day2prac/imgs/ntoon.png);
+            }
+
+            .search_img {
+                background-image: url(/day2prac/imgs/Nlogo.png);
+            }
+
+            .github,
+            .acorn,
+            .gpt {
+                display: none;
+            }
+
+            .search {
+                transform: rotate(360deg);
+                transition: 1s;
+            }
+
+            .search_bar {
+                border: 1px solid rgb(15, 211, 90);
+            }
+
+            .bottom {
+                width: 100%;
+                border: 1px solid black;
+                display: none;
+
+            }
+
+            .bottom2 {
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .box1 {
+                width: 200px;
+                height: 300px;
+                background-image: url("https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8784950%2F87849508325.jpg&type=f372_372");
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                position: relative;
+            }
+
+            .box1 .box-info {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+
+                background: rgba(199, 193, 193, 0.6);
+                color: #fff;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                opacity: 0;
+                transition: 1s;
+            }
+
+            .box1:hover .box-info {
+                opacity: 1;
+                font-weight: bold;
+                font-size: 20px;
+                color: black;
+            }
+
+
+            .box2 {
+                width: 200px;
+                height: 300px;
+                background-image: url("https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8419590%2F84195901459.1.jpg&type=f372_372");
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                position: relative;
+            }
+
+            .box2 .box-info {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+
+                background: rgba(199, 193, 193, 0.6);
+                color: #fff;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                opacity: 0;
+                transition: 1s;
+            }
+
+            .box2:hover .box-info {
+                opacity: 1;
+                font-weight: bold;
+                font-size: 20px;
+                color: black;
+            }
+
+            .box3 {
+                width: 200px;
+                height: 300px;
+                background-image: url("https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8251004%2F82510047512.7.jpg&type=f372_372");
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                position: relative;
+            }
+
+            .box3 .box-info {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+
+                background: rgba(199, 193, 193, 0.6);
+                color: #fff;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                opacity: 0;
+                transition: 1s;
+            }
+
+            .box3:hover .box-info {
+                opacity: 1;
+                font-weight: bold;
+                font-size: 20px;
+                color: black;
+            }
+
+
+           .menu a{
+                
+           }
+
+           .search_bar{
+             width: 100%;
+           }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2> 구글에 오신 것을 환영합니다! </h2>
+
+    <nav>
+        <!--메뉴-->
+        <ul class="menu">
+            <h3>클릭-></h3>
+            <a href="https://www.google.com/" target="_blank">
+                <li class="item1"></li>
+            </a>
+            <li class="item2"></li>
+            <li class="item3"></li>
+        </ul>
+    </nav>
+
+
+
+
+    <!-- google title 영역-->
+    <div class="title">
+        <div class="logo"></div>
+    </div>
+
+    <!--검색바 영억-->
+    <div class="search">
+
+        <!--검색어-->
+        <div class="search_bar">
+            <div class="search_img"></div>
+            <input type="text" placeholder="구글이에요!">
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        <div class="gpt"></div>
+        <div class="github"></div>
+        <div class="acorn"></div>
+    </div>
+
+    <div class="bottom2">
+        <div class="box1">
+            <div class="box-info">
+                <h3>여름 세트</h3>
+                <p>시원허이~</p>
+                <p>25000냥</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box-info">
+                <h3>강아지 티셔츠</h3>
+                <p>귀여워이~</p>
+                <p>18000냥</p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="box-info">
+                <h3>카라넥 반팔티</h3>
+                <p>멋있어이~</p>
+                <p>27000냥</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        function updateTitleText() {
+            const title = document.querySelector('h2');
+            if (window.innerWidth <= 1000) {
+                title.textContent = '사실 네이버지롱~';
+            } else {
+                title.textContent = '구글에 오신 것을 환영합니다!';
+            }
+        }
+
+        window.addEventListener('load', updateTitleText);
+        window.addEventListener('resize', updateTitleText);
+
+
+        function updatePlaceholderText() {
+            const input = document.querySelector('.search_bar input');
+            if (window.innerWidth <= 1000) {
+                input.placeholder = '😝😝속았지~~😝😝';
+            } else {
+                input.placeholder = '구글이에요!!';
+            }
+        }
+
+        window.addEventListener('load', updatePlaceholderText);
+        window.addEventListener('resize', updatePlaceholderText);
+
+    </script>
+
+
+</body>
+
+</html>

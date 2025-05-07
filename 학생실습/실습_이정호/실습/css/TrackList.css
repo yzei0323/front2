@@ -1,0 +1,83 @@
+/*트랙리스트*/
+.trackList{
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.introDiv {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.introDiv h1 {
+    margin: 0;
+    font-size: 28px;
+}
+.date {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+.intro{
+    color: #414141;
+}
+.album-art {
+    width: 300px;
+}
+.icon{
+    width: 50px;
+    margin-right: 10px;
+}
+
+table {
+    max-width: 800px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+td {
+    padding: 12px 16px;
+    text-align: left;
+    color: #555;
+}
+tr {
+    border-top: 1px solid #ddd;
+}
+tr:nth-last-child(1){
+    border-bottom: 1px solid #ddd;
+}
+td:nth-child(1){
+    font-weight: bold;
+    color: black;
+}
+td:nth-child(2){
+    color: black;
+}
+.title{
+    background-color: black;
+    color: white;
+    padding: 0px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/*반응형*/
+@media (max-width : 768px){
+    .trackList{
+        width: 400px;
+    }
+    .introDiv{
+        display: block;
+    }
+    .album-art{
+        margin: 0px 0px 10px 40px;
+    }
+    td{
+        font-size: 13px;
+    }
+}

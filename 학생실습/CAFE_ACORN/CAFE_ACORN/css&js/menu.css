@@ -1,0 +1,113 @@
+/* 전체 서식 */
+.menu-wrap
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+    border: 1px solid #3E2723;
+    background-color: #F5EFE6;
+
+    color: #3E2723;
+}
+
+
+
+/* 분류 */
+.menu-category
+{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+hr
+{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    border: none;
+    border-top: 1px solid #3E2723;
+}
+
+
+
+/* 메뉴 */
+.menu-content
+{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+
+    display: flex;
+}
+.item
+{
+    width: 25%;
+    height: 300px;
+    border-radius: 5px;
+
+    position: relative;
+
+    border: 1px solid #3E2723;
+    background-size: cover;
+    background-position: center;
+}
+.item:hover { border: 2px solid #3E2723; }
+.item:nth-child(2) { margin: 0 10px 0 10px; }
+.item:nth-child(3) { margin-right: 10px; }
+
+.text
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 0 0 5px 5px;
+
+    position: absolute;
+    bottom: 0;
+
+    border-top: 1px solid #3E2723;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+
+/* 메뉴 이미지 */
+.coffee:nth-child(1) { background-image: url('/CAFE_ACORN/resources/menu/아메리카노.png'); }
+.coffee:nth-child(2) { background-image: url('/CAFE_ACORN/resources/menu/카페라떼.png'); }
+.coffee:nth-child(3) { background-image: url('/CAFE_ACORN/resources/menu/카페모카.png'); }
+.coffee:nth-child(4) { background-image: url('/CAFE_ACORN/resources/menu/콜드브루.png'); }
+
+.drink:nth-child(1) { background-image: url('/CAFE_ACORN/resources/menu/유자차.png'); }
+.drink:nth-child(2) { background-image: url('/CAFE_ACORN/resources/menu/녹차라떼.png'); }
+.drink:nth-child(3) { background-image: url('/CAFE_ACORN/resources/menu/초코라떼.png'); }
+.drink:nth-child(4) { background-image: url('/CAFE_ACORN/resources/menu/레몬에이드.png'); }
+
+.dessert:nth-child(1) { background-image: url('/CAFE_ACORN/resources/menu/티라미수.png'); }
+.dessert:nth-child(2) { background-image: url('/CAFE_ACORN/resources/menu/치즈케이크.png'); }
+.dessert:nth-child(3) { background-image: url('/CAFE_ACORN/resources/menu/초코케이크.png'); }
+.dessert:nth-child(4) { background-image: url('/CAFE_ACORN/resources/menu/아이스박스.png'); }
+
+
+
+/* 모바일 */
+@media (max-width: 768px)
+{
+    .menu-content { flex-direction: column; }
+    .item
+    {
+        width: 100%;
+        height: 300px;
+        margin: 0 0 10px 0;
+    }
+    .item:nth-child(2), .item:nth-child(3) { margin: 0 0 10px 0 !important; }
+}

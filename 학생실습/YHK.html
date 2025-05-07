@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>윤현기</title>
+
+  <style>
+    /* 헤더 스타일 */
+    h1 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    
+    /* 메뉴바 링크 스타일 */
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+
+    /* 메뉴바 링크 호버 효과 */
+    a:hover {
+      color: #ff6b6b;
+    }
+
+    /* 기본 텍스트 요소 마진/패딩 제거 */
+    h5, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 전체 컨테이너 스타일 */
+    .wrap {
+      width: 950px;
+      margin: 0 auto;
+    }
+
+    /* 글로벌 네비게이션 바 스타일 */
+    .gnb {
+      text-align: right;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* 검색 영역 스타일 */
+    .search {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    /* 검색 입력창 스타일 */
+    .search input {
+      background-image: url(https://cdn-icons-png.flaticon.com/512/54/54481.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 25px;
+      border: none;
+      outline: none;
+      width: 200px;
+      font-size: 16px;
+      border-bottom: 0.5px solid #ccc;
+    }
+
+    /* 검색 버튼 스타일 */
+    .search button {
+      width: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: #ff6b6b;
+      border: none;
+      font-size: 25px;
+      font-weight: bold;
+      border-radius: 20px;
+      color: white;
+    }
+
+    /* 기본 이미지 스타일 */
+    img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* 카테고리 아이템 컨테이너 스타일 */
+    .item {
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 10px;
+      border-radius: 20px;
+    }
+
+    /* 카테고리 설명 오버레이 스타일 */
+    .desc {
+      width: 100%;
+      height: 400px;
+      background-color: rgba(255, 107, 107, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      line-height: 400px;
+      font-size: 30px;
+      font-weight: bold;
+      opacity: 0;
+      transform: scale(0) rotate(-180deg);
+      transition: all 0.5s ease-in-out;
+    }
+
+    /* 카테고리 호버 효과 */
+    .item:hover .desc {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    /* 카테고리 아이템 래퍼 스타일 */
+    .item-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* 상품 아이템 래퍼 스타일 */
+    .item-wrap2 {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    /* 상품 아이템 스타일 */
+    .item2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+      width: 500px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    /* 상품 이미지 스타일 */
+    .item2 img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* 상품 이미지 호버 효과 */
+    .item2:hover img {
+      transform: scale(1.1);
+    }
+
+    /* 상품 텍스트 스타일 */
+    .text {
+      width: 250px;
+    }
+
+    /* 반응형 미디어 쿼리 - 모바일 화면 */
+    @media (max-width: 768px) {
+      /* 모바일용 전체 컨테이너 너비 */
+      .wrap {
+        width: 100%;
+      }
+      
+      /* 모바일용 카테고리 아이템 배치 */
+      .item-wrap {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* 모바일용 카테고리 아이템 너비 */
+      .item {
+        width: 90%;
+      }
+      
+      /* 모바일용 카테고리 이미지 너비 */
+      .item img {
+        width: 100%;
+      }
+      
+      /* 모바일용 상품 아이템 마진 */
+      .item2 {
+        margin-top: 20px;
+      }
+
+      /* 모바일용 상품 이미지 크기 */
+      .item2 img {
+        width: 150px;
+        height: 150px;
+      }
+
+      /* 모바일용 상품 래퍼 배치 */
+      .item-wrap2 {
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 메인 컨테이너 -->
+  <div class="wrap">
+    <!-- 헤더 영역 -->
+    <div class="header">
+      <!-- 사이트 제목 -->
+      <h1>현기 쇼핑몰</h1>
+      
+      <!-- 글로벌 네비게이션 바 -->
+      <div class="gnb">
+        <a href="#none">카테고리</a>
+        <a href="#none">로그인</a>
+        <a href="#none">홈</a>
+      </div>
+
+      <!-- 검색 및 장바구니 영역 -->
+      <div class="search">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <button>장바구니</button>
+      </div>
+
+      <!-- 카테고리 이미지 영역 -->
+      <div class="item-wrap">
+        <!-- 여성의류 카테고리 -->
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="여성의류">
+          <!-- 호버시 표시되는 설명 영역 -->
+          <div class="desc">
+            <h5>여성의류</h5>
+          </div>
+        </div>
+
+        <!-- 남성의류 카테고리 -->
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="남성의류">
+          <!-- 호버시 표시되는 설명 영역 -->
+          <div class="desc">
+            <h5>남성의류</h5>
+          </div>
+        </div>
+
+        <!-- 악세서리 카테고리 -->
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1560243563-062bfc001d68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="악세서리">
+          <!-- 호버시 표시되는 설명 영역 -->
+          <div class="desc">
+            <h5>악세서리</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 베스트 상품 영역 -->
+      <div class="item-wrap2">
+        <!-- 첫 번째 상품 -->
+        <div class="item2">
+          <img src="https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          <div class="text">
+            <p>[여름 상품]<br>
+              시원한 린넨 셔츠<br>
+              <br>
+              35,000원</p>
+          </div>
+        </div>
+
+        <!-- 두 번째 상품 -->
+        <div class="item2">
+          <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          <div class="text">
+            <p>[베스트셀러]<br>
+              트렌디 청바지<br>
+              <br>
+              45,000원</p>
+          </div>
+        </div>
+
+        <!-- 세 번째 상품 -->
+        <div class="item2">
+          <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          <div class="text">
+            <p>[한정판매]<br>
+              프리미엄 가죽 백팩<br>
+              <br>
+              89,000원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

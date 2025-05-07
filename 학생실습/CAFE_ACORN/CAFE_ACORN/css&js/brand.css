@@ -1,0 +1,49 @@
+/* 전체 서식 */
+.brand
+{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.philosophy
+{
+    background-color: #f4f1e1;
+    color: #3e2b1f;
+}
+.story
+{
+    background-color: #d1b299; 
+    color: #3e2b1f;
+}
+.team
+{
+    margin-bottom: 20px;
+    
+    background-color: #f4f4f4;
+    color: #3e2b1f;
+}
+
+
+
+
+/* 배너 */
+.banner
+{
+    width: 100%;
+    height: 40px;
+
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.right { text-align: right; }
+hr
+{
+    width: 60%;
+    margin: 10px 0 10px 0;
+
+    border: none;
+}
+.philosophy hr, .story hr { border-top: 1px solid #3e2b1f; }
+.story hr { margin-left: auto; }
+.team hr { border-top: 1px solid #3e2b1f; }

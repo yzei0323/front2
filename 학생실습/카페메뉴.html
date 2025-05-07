@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카페 메뉴</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f8f5f0;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #666;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .menu-item {
+      width: 250px;
+      height: auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.03);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 60%;
+      border-radius: 5px;
+    }
+
+    .menu-info {
+      padding: 15px;
+    }
+
+    .menu-info h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .menu-info p {
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    /* 히든영역 */
+    .desc{
+        width: 100%;
+        height: 60px;
+        /* 부모기준 바닥아래 */
+        position: absolute;
+        bottom: -60px;
+        left: 0px;
+        transition: 0.5s;
+    }
+
+    .desc h5{
+        position: absolute;
+        right: 0;
+    }
+
+    .desc p{
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+    }
+
+    .menu-item:hover .desc{
+        bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .menu{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu-item {
+        width: 100%;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Daily Coffee</h1>
+    <p>오늘 뭐 마실래요?</p>
+  </header>
+
+  <section class="menu">
+    <div class="menu-item">
+        <!--메뉴사진-->
+        <img src="3.jpg" alt="아메리카노">
+        <div class="menu-info">
+            <h3>아메리카노</h3>
+            <p>시원하고 깔끔한 맛</p>
+        </div>
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>가격</h5>
+            <p class="price">4500</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <!--메뉴사진-->
+        <img src="1.jpg" alt="카페라떼">
+        <div class="menu-info">
+            <h3>카페라떼</h3>
+            <p>부드러운 우유와 에스프레소</p>
+        </div>
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>가격</h5>
+            <p class="price">5000</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <!--메뉴사진-->
+        <img src="2.jpg" alt="바닐라라떼">
+        <div class="menu-info">
+            <h3>바닐라라떼</h3>
+            <p>달콤한 바닐라의 조화</p>
+        </div>
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>가격</h5>
+            <p class="price">5500</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <!--메뉴사진-->
+        <img src="2.jpg" alt="말차라떼">
+        <div class="menu-info">
+            <h3>버블티</h3>
+            <p>진하고 깊은 홍차와 우유 그리고 쫀득한 타피오카의 만남</p>
+        </div>
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>가격</h5>
+            <p class="price">6000</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <!--메뉴사진-->
+        <img src="3.jpg" alt="레몬에이드">
+        <div class="menu-info">
+            <h3>레몬에이드</h3>
+            <p>상큼한 탄산 음료</p>
+        </div>
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>가격</h5>
+            <p class="price">4000</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <!--메뉴사진-->
+        <img src="7.jpg" alt="딸기스무디">
+        <div class="menu-info">
+            <h3>스무디</h3>
+            <p>달콤하고 시원한 스무디</p>
+        </div>
+
+        <!--히든영역-->
+        <div class="desc">
+            <h5>가격</h5>
+            <p class="price">3000</p>
+        </div>
+    </div>
+  </section>
+
+</body>
+</html>
